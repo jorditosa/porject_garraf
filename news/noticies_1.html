@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Garraf for Change | Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="asets/styles.css">
+    <link rel="stylesheet" href="../asets/styles.css">
 </head>
 <body>
     <header>
         <div class="container header">
-            <a href="index.html"><img class="logo" src="img/logo_project_garraf.png" alt="logo project Garraf"></a>
+            <a href="../index.html"><img class="logo" src="../img/logo_project_garraf.png" alt="logo project Garraf"></a>
             <i class="fas fa-bars" id="mobile-btn"></i>
             <ul>
-                <li><a href="elprojecte.html">El projecte</a></li>
-                <li><a href="noticies.html">Notícies</a></li>
-                <li><a href="accio.html">Acció</a></li>
+                <li><a href="../elprojecte.html">El projecte</a></li>
+                <li><a href="../noticies.html">Notícies</a></li>
+                <li><a href="../accio.html">Acció</a></li>
                 <div class="header-social">
                     <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
                     <li><a href="#"><i class="fa-solid fa-envelope"></i></a></li>
@@ -25,9 +25,9 @@
         </div>
         <div class="header-mobile hidden-mobile">
             <ul>
-                <li><a href="elprojecte.html">El projecte</a></li>
-                <li><a href="noticies.html">Notícies</a></li>
-                <li><a href="accio.html">Acció</a></li>
+                <li><a href="../elprojecte.html">El projecte</a></li>
+                <li><a href="../noticies.html">Notícies</a></li>
+                <li><a href="../accio.html">Acció</a></li>
                 <div class="header-mobile-social">
                     <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
                     <li><a href="#"><i class="fa-solid fa-envelope"></i></a></li>
@@ -36,20 +36,24 @@
         </div>
     </header>
 
-    <section class="container spacing">
-        <h1 class="text-center spacing text-dark">Classificació Clubs 2022-23</h1>
-        <ul class="draggable-list container" id="draggable-list">
-            <li>
-                <span class="number"><small>Pos.</small></span>
-                <div class="draggable" draggable="true">
-                <p class="person-name text-dark"><small>Soci/a</small></p>
-                </div>
-                <span class="number"><small>Punts</small></span>
-            </li>
-        </ul>
-        <ul class="draggable-list" id="draggable-list"></ul>
+    <section class="hero-noticia">
+
     </section>
-   
+
+    <main class="bg-white spacing" id="noticies">
+        <div class="container">
+            <h2 class="text-center text-dark spacing dark">Notícies</h2>
+            <div class="noticies-item container" data-news="1">
+                <div class="noticies-item-info">
+                    <h3 class="text-dark">Primera acció!</h3>
+                    <time class="news-date">01/07/2022</time>
+                    <img src="../img/20200719-jornada-colls-5.jpg" alt="imatge recollida colls">
+                    <p class="text-dark">El projecte Garraf ja està en marxa! Gràcies a la iniciativa dels clubs i entitats amb ganes de començar a realitzar un canvi en el nostre entorn natural proper, aquest proper 14 de juliol empendrèm la primera acció conjunta.</p>
+                </div> 
+            </div> 
+        </div>
+    </main>
+
     <footer class="bg-dark">
         <div class="container">
             <ul class="footer">
@@ -61,12 +65,10 @@
                     <li><a href="#"><i class="fa-solid fa-envelope"></i></a></li>
                 </div>
             </ul>
-            <div class="copy">&copy Projecte Garraf 2022. Una iniciativa pel medi ambient.</div>
         </div>
     </footer>
-    
-
-    <script src="asets/bbdd.js"></script>
-    <script src="asets/app.js"></script>
+       
+    <script src="../asets/bbdd.js"></script>
+    <script src="../asets/app.js"></script>
 </body>
 </html>

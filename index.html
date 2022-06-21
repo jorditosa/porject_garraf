@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Garraf for Change | Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="asets/styles.css">
 </head>
 <body>
     <header>
@@ -34,7 +34,6 @@
                 </div>
             </ul>
         </div>
-       
     </header>
 
     <section class="hero">
@@ -61,20 +60,23 @@
         </div>
     </section>
 
-    <main class="spacing-box" id="noticies">
-        <div class="container">
+    <main class="spacing-box container" id="noticies">
+        <div>
             <h2 class="text-center text-dark spacing dark">últimes notícies</h2>
-            <div class="noticies container">
+            <div class="noticies">
                 <div class="noticies-item" data-news="1">
-                    <img src="img/20200719-jornada-colls-5.jpg" alt="imatge recollida colls">
-                    <div class="noticies item-info">
-                        <h3 class="text-dark">Primera acció!</h3>
-                        <time class="news-date">01/07/2022</time>
-                        <p class="text-dark">El projecte Garraf ja està en marxa! Gràcies a la iniciativa dels clubs i entitats amb ganes de començar a realitzar un canvi en el nostre entorn natural proper, aquest proper 14 de juliol empendrèm la primera acció conjunta.</p>
+                    <div class="ultimes-noticies-item-info">
+                        <img src="img/20200719-jornada-colls-5.jpg" alt="imatge recollida colls">
+                        <div>
+                            <h3 class="text-dark">Primera acció!</h3>
+                            <time class="news-date">01/07/2022</time>
+                            <p class="text-dark">El projecte Garraf ja està en marxa! Gràcies a la iniciativa dels clubs i entitats amb ganes de començar a realitzar un canvi en el nostre entorn natural proper, aquest proper 14 de juliol empendrèm la primera acció conjunta.</p>
+                            <button class="btn"><a href="news/noticies_1.html">Anar a la notícia completa</a></button>
+                        </div>  
                     </div> 
                 </div>
             </div>
-            <button class="btn"><a href="noticies.html">Accedeix a totes les notícies</a></button>
+            
         </div>
     </main>
 
@@ -82,7 +84,8 @@
         <div class="container clubs">
             <h2 class="text-center spacing text-dark dark">Clubs i entitats en acció</h2>
             <div class="clubs-logos">
-                <img src="img/logo_garraf_runners.jpg" alt="logo garraf">
+                <img src="img/consell_comarcal.png" alt="logo consell comarcal">
+                <img src="img/logo_garraf_runners.jpg" alt="logo garraf runners">
                 <img src="img/L_deporunners.png" alt="logo deporunners">
                 <img src="img/logo_talaia.png" alt="logo talaia">
             </div>
@@ -100,15 +103,11 @@
                     <li><a href="#"><i class="fa-solid fa-envelope"></i></a></li>
                 </div>
             </ul>
+            <div class="copy">&copy Projecte Garraf 2022. Una iniciativa pel medi ambient.</div>
         </div>
     </footer>
- 
-    
-       
-  
-    
 
-    <script src="bbdd.js"></script>
-    <script src="app.js"></script>
+    <script src="asets/bbdd.js"></script>
+    <script src="asets/app.js"></script>
 </body>
 </html>

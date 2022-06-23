@@ -11,7 +11,7 @@ function start(){
 
 function menuMobile(){
     let mobileBtn = document.querySelector('#mobile-btn');
-let mobileMenu = document.querySelector('.header-mobile');
+    let mobileMenu = document.querySelector('.header-mobile');
 
 mobileBtn.addEventListener('click', () => {
         
@@ -19,6 +19,13 @@ mobileBtn.addEventListener('click', () => {
     if(mobileBtn.classList.contains('fa-bars')){
         mobileBtn.classList.remove('fa-bars');
         mobileBtn.classList.add('fa-times');
+
+        mobileMenu.addEventListener('click', () => {
+            mobileBtn.classList.add('fa-bars');
+            mobileBtn.classList.remove('fa-times');
+            mobileMenu.classList.add('hidden-mobile');
+
+        });
     } else {
         mobileBtn.classList.add('fa-bars');
         mobileBtn.classList.remove('fa-times');

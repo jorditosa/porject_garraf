@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Yantramanav:wght@100;400;700;900&display=swap');
 
 :root {
-    --main-color: #49aa0ade;
-    --secondary-color: #6B0AAA;
-    --mobile-menu-bg: #49aa0ade;
+    --main-color: #2EB340;
+    --secondary-color: #FF5C87;
+    --light-color: #5DFF72;
+    --mobile-menu-bg: #2EB340;
     --bg-hf: #0b1f00;
 
     --main-font: 'Yantramanav', sans-serif;
@@ -29,27 +30,36 @@ body {
     min-height: 100vh;
 
     line-height: 1.6;
+    animation: loadingPage 0.8s linear;
+}
+@keyframes loadingPage {
+    0%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 section {
     width: 100%;
 }
 .container {
-    max-width: 900px;
+    max-width: 1000px;
     width: 90%;
     margin: 0 auto;
 }
 h1, h2, h3, h4{
     font-family: var(--secondary-font);
-    color: #fff;
+    color: #000;
     text-align: center;
     font-weight: 900;
 }
 h1{
-    color: #fff;
-    font-size: 38px;
+    color: #000;
+    font-size: 32px;
 }
 h2 {
-    font-size: 32px;
+    font-size: 28px;
     position: relative;
 }
 h2::before {
@@ -59,7 +69,7 @@ h2::before {
     left: 0;
     right: 0;
     bottom: 25px;
-    border-bottom: 4px solid #fff;
+    border-bottom: 4px solid #000;
     border-radius: 25px;
 }
 h2.dark::before {
@@ -73,24 +83,22 @@ h2.dark::before {
     border-radius: 25px;
 }
 h3 {
-    font-size: 28px;
+    font-size: 24px;
+}
+h4 {
+    font-size: 22px;
 }
 p {
-    color: #fff;
+    color: #000;
     font-size: 18px;
 }
 a{
     text-decoration: none;
     cursor: pointer;
-    color: #fff;
-    font-size: 14px;
+    color: #000;
+    font-size: 18px;
     font-weight: 700;
     transition: opacity 0.3s ease-in;
-}
-@media (min-width: 768px) {
-    a{
-        font-size: 28px; 
-    }
 }
 li {
     list-style-type: none;
@@ -113,6 +121,7 @@ header{
     display: flex;
     justify-content: space-between;
     padding: 0.6em 0;
+    color: #fff;
 }
 .header ul {
     display: none;
@@ -131,6 +140,7 @@ header{
 }
 .header ul li a {
     transition: 0.5s;
+    color: #fff;
 }
 .header ul li a:hover{
     cursor: pointer;
@@ -199,9 +209,11 @@ footer{
     gap: 1em;
     justify-content: space-between;
     padding: 1em 0;
+    color: #fff;
 }
 .footer li a {
     font-size: 16px;
+    color: #fff;
 }
 @media (min-width: 768px) {
     .footer {
@@ -281,38 +293,40 @@ footer{
 /* WAVES */
 
 .wave-up {
-    margin-top: 10px;
+    outline: none;
+    border: none;
+    margin: -1px 0 0 0;
 }
 .wave-down {
-    margin-top: -1px;
+    outline: none;
+    border: none;
+    margin: 0 0 -1px 0;
 }
-@media (min-width: 768px) {
-    .wave-down {
-        margin-top: 0px;
-    }
-}
-
 
 
 /* FONT AWESOME */
 i {
-    color: #fff;
     transition: 0.3s ease-in;
 }
 i:hover {
     cursor: pointer;
     color: var(--secondary-color);
 }
+header i {
+    color: #fff;
+}
 
 .fa-bars {
     display: flex;
     justify-content: end;
     font-size: 50px;
+    padding: 20px;
 }
 .fa-times {
     display: flex;
     justify-content: end;
     font-size: 50px;
+    padding: 20px;
 }
 @media (min-width: 768px) {
     .fa-bars {
@@ -330,9 +344,11 @@ img {
     display: block;
 }
 .logo {
+    border: 1px solid #fff;
+    border-radius: 5px;
+    outline: 3px solid rgb(222, 241, 221);
     height: auto;
     max-width: 100px;
-    box-shadow: 0 0 25px 30px #fff;
 }
 /** UTILITIES *******/
 .text-center{
@@ -353,8 +369,8 @@ img {
 .bg-dark {
     background-color: var(--main-color);
 }
-.text-dark {
-    color: #000;
+.text-white {
+    color: #fff;
 }
 
 /** HERO **/
@@ -364,15 +380,14 @@ img {
     background-size: cover;
     background-position: center bottom;
     background-repeat: no-repeat;
-    filter: saturate(130%);
     width: 100%;
-    height: 300px;
+    height: 200px;
     margin-top: 0;
     position: relative;
 }@media (min-width: 768px) {
     .hero {
-        background-position: center bottom;
-        height: 60vh;
+        background-position: center 80%;
+        height: 50vh;
     }
 }
 .hero-noticia {
@@ -385,17 +400,6 @@ img {
     height: 100px;
     margin-top: 0;
     position: relative;
-}
-.hero::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: var(--secondary-color);
-    z-index: 99;
-    opacity: 0.1;
 }
 .legend {
     display: flex;
@@ -431,16 +435,18 @@ img {
         padding: 1em;
     }
 }
-.actions-counter span {
+.actions-counter span,
+.actions-counter h3 {
     font-family: var(--secondary-font);
     text-align: center;
-    color: #6B0AAA;
+    color: var(--light-color);
     font-size: 18px;
 }
 .num {
     font-family: var(--secondary-font);
     font-size: 24px;
     text-align: center;
+    color: #fff;
 }
 @media (min-width: 768px) {
     .num {
@@ -606,16 +612,95 @@ img {
 .terms-ol p{
     color: #000;
 }
-
-.action-1::before {
-    content: '';
+.terms-ol-text {
+    display: flex;
+    align-items: center;
+}
+.fa-1,
+.fa-2,
+.fa-3 {
+    text-align: center;
     color: var(--main-color);
-    width: 5px;
-    padding: 0.4em;
-    margin: 0 1em;
-    background-image: url(../img/num/1-solid.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    
+    width: 40px;
+}
+
+/***** PROJECTE PAGE */
+
+.faq {
+    background: transparent;
+    border: 1px solid #9fa4a8;
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.6s ease-in;
+}
+.faq.active {
+    background-color: #fff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: 0.6s ease-in;
+}
+.faq.active::before,
+.faq.active::after {
+    content: '\f075';
+    font-family: 'Font Awesome 5 Free';
+    color: #2ecc71;
+    font-size: 7rem;
+    position: absolute;
+    opacity: 0.2;
+    top: 20px;
+    left: 20px;
+    z-index: 0;
+}
+.faq.active::before {
+    color: #3498db;
+    top: -10px;
+    left: -30px;
+    transform: rotateY(180deg);
+}
+.faq-title {
+    margin: 0 35px 0 0;
+}
+.faq-text {
+    display: none;
+    margin: 30px 0 0;
+}
+.faq.active .faq-text {
+    display: block;
+}
+.faq-toggle {
+    background-color: transparent;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    padding: 0;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+
+    transition: 0.3s ease-in;
+}
+.faq-toggle:focus {
+    outline: 0;
+}
+
+.faq-toggle .fa-xmark {
+    display: none;
+}
+.faq.active .faq-toggle .fa-xmark {
+    color: #fff;
+    display: block;
+}
+.faq.active .faq-toggle .fa-chevron-down {
+    display: none;
+}
+.faq.active .faq-toggle  {
+    background-color: var(--light-color);
 }

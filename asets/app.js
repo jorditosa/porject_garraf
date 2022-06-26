@@ -1,10 +1,11 @@
 document.addEventListener('DOMContentLoaded', start());
 
 function start(){
+    faqToggles();
     menuMobile();
     statisticsHomePage();
-
     classificationStats();
+    
 }
 
 // MENU MOBILE
@@ -22,15 +23,29 @@ mobileBtn.addEventListener('click', () => {
 
         mobileMenu.addEventListener('click', () => {
             mobileBtn.classList.add('fa-bars');
-            mobileBtn.classList.remove('fa-times');
+            mobileBtn.classList.remove('fa-xmark');
             mobileMenu.classList.add('hidden-mobile');
 
         });
     } else {
         mobileBtn.classList.add('fa-bars');
-        mobileBtn.classList.remove('fa-times');
+        mobileBtn.classList.remove('fa-xmark');
     }     
 });
+}
+
+// FAQ TOGGLES Porjecte Page
+
+
+function faqToggles(){
+
+    const toggles = document.querySelectorAll('.faq-toggle');
+    toggles.forEach( toggle => {
+        toggle.addEventListener('click', () =>{
+            toggle.parentNode.classList.toggle('active');
+        })
+    })
+
 }
 
 
